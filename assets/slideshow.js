@@ -1,9 +1,5 @@
 jQuery(document).ready(function ($) {
 
-  //Autoplay slider
-    setInterval(function () {
-        moveRight();
-    }, 3000);
 
   
   var slideCount = $('#slider ul li').length;
@@ -11,14 +7,13 @@ jQuery(document).ready(function ($) {
   var slideHeight = $('#slider ul li').height();
   var sliderUlWidth = slideCount * slideWidth;
   
-  
+
   //Shows one image at the time
   $('#slider').css({ width: slideWidth, height: slideHeight });
     
   //Makes the images slide nicely 
   $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
     
-
 
   //Left controller 
     function moveLeft() {
@@ -57,9 +52,12 @@ jQuery(document).ready(function ($) {
   //Make text show on image
   $(function(){
     $('li p').addClass('slider__text');
-
   });
-   
+
+   //Autoplay slider
+    setInterval(function () {
+        moveRight();
+    }, 3000);
 
 
 });    

@@ -15,15 +15,17 @@ There is only one HTML file, with little content.
 
 -Inside this DIV we set up two controllers for the slider, with classes "control__next" and "control__prev"
 
--Next, we set up a list with the images for the slider (you can use the links I have set as sources). I also gave each image an title witch will be triggered by CSS and JQuery
+-Next, we set up a list with the images for the slider (you can use the links I have set as sources). I also gave each image a title which will be triggered by CSS and JQuery
 
 
 
 
 The CSS:
-There is only one CSS file, with style for the Slider, Text and Controllers
+There is only one CSS file, with style for the Slider, Text and Controllers.
 
--What is important to note here, is the style for "position", "overflow", "display" and "z-index". Besides these, you can change the style as you like without ruining the slider.  
+-What is important to note here, is the style for "position", "overflow", "display" and "z-index". Besides these, you can mostly change the style as you like without ruining the slider. 
+
+-One class (.slider__text) in the CSS file, is not declared in the HTML. This class will be declared in the JS file and appended to an element in HTML.  
 
 
 
@@ -34,18 +36,22 @@ There is only one JS file, with the necessary functions for a basic slider.
 
 -Line 5-8: here we declare some variables.
 
--Line 12: this line makes the slider show one image at the time. Without this, the slider will show all images across the screen.  
+-Line 12: this line makes the slider show one image at the time. Without this, the slider will show all images across the screen. The slider will work though. 
 
 -Line 15: this line makes the images slide without any margins to it. The images overlap each other nicely.
 
--Line 19-26:
+-Line 19-26: here we make the left controller. The animate() function preforms a custom animation of a set of CSS properties. The function creates an animated effect of the images going left. We use the prepend() method to insert specified content at the beginning of the selected elements.
 
 -Line 29-31: here we used the click() method. This occurs when an element is clicked. So when the left controller in the slider is clicked, the moveLeft function is triggered. 
 
--Line 36-43:  
+-Line 36-43: here we make the right controller, with the animate function. And we use the appendTo() method to insert the content at the end of the selected elements.
 
 -Line 46-48: here we also used the click() method. So when the right controller in the slider is clicked, the moveRight function is triggered.
 
 -Line 53-55: here we use the append() method, which will take our class name (slider__text) and append it to our selected element (li p). This is the image text in the HTML file, that now will be displayed at the page. 
 
 -Line 58-60: here we set an interval to the function, so that the slider will automatically slide. We trigger the moveRight function to go every 3 second.
+
+
+
+Author: Sanna Oyre
